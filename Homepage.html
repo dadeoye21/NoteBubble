@@ -3,24 +3,50 @@
 
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Homepage.css">
+        <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+        <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <title>NoteBubble</title>
-        <script>
-            var node = document.createElement('li');
-            node.appendChild(document.createTextNode('Scooter'));
-            document.querySelector('ul').appendChild(node);
-        </script>
     </head>
 
     <body>
-        <ul style="list-style-type: none;">
-            <li>Coffee</li>
-            <li>Tea</li>
-            <li>Milk</li>
-        </ul>
+        <script src="index.js" type="text/babel"></script>
+        <div class="container1">
+            <div class="toppane">
+                <h2>User's NoteBubble</h2>
+            </div>
+
+            <div class="leftpane">
+                <h1>Test Page</h1>
+            </div>
+
+            <div class="bottompane">
+                <h3>+ New Page</h3>
+            </div>
+        </div>
+
+        <div class="container2">
+            <div class="middlepane">
+                <h1 class="pageTitle">Page Title</h1>
+                <button class="newButton grow" onclick="newWindow()">
+                    <script>
+                        function newWindow() {
+                            var left = (screen.width - 900) / 2;
+                            var top = (screen.height - 500) / 4;
+                            var myWindow = window.open("#", "_blank","toolbar=yes,scrollbars=yes,resizable=yes,top='+ top + ',left='left',width=900,height=500");
+                            myWindow.document.write("<input type='text'></input>");
+                        }
+                    </script>
+                    <span class="highlight"></span>
+                    <span class="text">New</span>
+                </button>
+                <hr>
+            </div>
+        </div>
     </body>
      
-    </html>
+</html>
 
 
 
